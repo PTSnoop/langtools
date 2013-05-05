@@ -22,7 +22,9 @@ sspace.py find Qituva hurl 2
   This will return the Qituva word with the next closest definition, skipping the amount given.
 	'''
 
-def worseSearchForClosestWord(inword,langThes,spaceThes = Thesaurus(),depth=5,skip=0):
+def worseSearchForClosestWord(inword,langThes,spaceThes=0,depth=5,skip=0):
+	if spaceThes == 0:
+		spaceThes = Thesaurus()
 	stack = [inword]
 	skipwords = []
 
@@ -48,7 +50,9 @@ def worseSearchForClosestWord(inword,langThes,spaceThes = Thesaurus(),depth=5,sk
 					
 	return False
 
-def searchForClosestWord(inword,langThes,spaceThes = Thesaurus(),depth=2,skip=0):
+def searchForClosestWord(inword,langThes,spaceThes=0,depth=2,skip=0):
+	if spaceThes == 0:
+		spaceThes = Thesaurus()
 	stack = {}
 
 	stack[inword] = 0
@@ -124,7 +128,7 @@ if command == "add":
 			if continueAnyway != "y":
 				sys.exit(0)
 		
-			ownThesaurus.add(word,synonyms,comments)
+	ownThesaurus.add(word,synonyms,comments)
 	
 # sspace find cthiote throw 
 elif command == "find":

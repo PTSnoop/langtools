@@ -114,7 +114,7 @@ class Thesaurus:
 		th.write(saveline)
 		th.close()
 
-if __name__ == "__main__":
-	import random
-	thesaurus = Thesaurus()
-	random.choice(thesaurus.words).printWord()
+#if __name__ == "__main__":
+#	import random
+#	thesaurus = Thesaurus()
+#	random.choice(thesaurus.words).printWord()
