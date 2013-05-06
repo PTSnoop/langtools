@@ -33,7 +33,7 @@ class Word:
 			print "Notes: " + self.notes
 
 class Thesaurus:
-	def __init__(self,datafile="mthes10/mthesaur.txt"):
+	def __init__(self,datafile="/files/Files/conlang/langtools/mthes10/mthesaur.txt"):
 		self.datafile = datafile
 		self.words = []
 		#try:
@@ -48,6 +48,24 @@ class Thesaurus:
 		#	print e
 		#	self.intact = False
 		
+	def remove(self,newword):
+		removes = []
+		for word in self.words:
+			if word.wordname == newword:
+				removes.append(word)
+				f = open(self.datafile,"r")
+				lines = f.readlines()
+				f.close()
+				for line in lines:
+					if line.split(",")[0] == word.wordname:
+						lines.remove(line)
+						f = open(self.datafile,"w")
+						f.writelines(lines)
+						f.close()
+
+		for word in removes:
+			self.words.remove(word)
+
 	def contains(self,newword):
 		validwords = []
 		for word in self.words:
@@ -61,7 +79,16 @@ class Thesaurus:
 			if newword in word.synonyms:
 				validwords.append(word)
 		return validwords
-	
+
+	def expand(self,inwords):
+		expandedwords = []
+		for word in self.words:
+			for syn in word.synonyms:
+				if syn in inwords:
+					expandedwords.append(word)
+		return expandedwords
+					
+
 	def oneLevelUp(self,wordset):
 		outwords = []
 		for word in wordset:
@@ -83,11 +110,11 @@ class Thesaurus:
 			saveline += "#"
 			saveline += comments
 		saveline += "\n"
-		th = open(self.datafile,"a")
+		th = open(self.datafile,"a+")
 		th.write(saveline)
 		th.close()
 
-if __name__ == "__main__":
-	import random
-	thesaurus = Thesaurus()
-	random.choice(thesaurus.words).printWord()
+#if __name__ == "__main__":
+#	import random
+#	thesaurus = Thesaurus()
+#	random.choice(thesaurus.words).printWord()
