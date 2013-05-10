@@ -180,7 +180,7 @@ elif command == "wordlist":
 	listfile = open(listfilename,"r")
 	wordlist = listfile.readlines()
 	listfile.close()
-	random.shuffle(wordlist)
+	#random.shuffle(wordlist)
 
 	engThesaurus = Thesaurus()
 
