@@ -1,8 +1,8 @@
-#/usr/bin/python
+#!/usr/bin/python
 # coding=utf-8
 
 import sys,os,random
-from thesaurus import *
+from langthesaurus import *
 
 def help():
 	print '''
@@ -20,6 +20,9 @@ sspace.py find Qituva hurl
 
 sspace.py find Qituva hurl 2
   This will return the Qituva word with the next closest definition, skipping the amount given.
+
+sspace.py wordlist Qituva Swadesh.txt
+  This will let you work through the given word list, randomly generating suggestions.
 	'''
 
 def worseSearchForClosestWord(inword,langThes,spaceThes=0,depth=5,skip=0):
@@ -102,16 +105,7 @@ if len(sys.argv) <= 1:
 
 command = sys.argv[1]
 
-# sspace add cthiote dhechøn throw,toss
-if command == "add":
-	lang = sys.argv[2]
-	word = sys.argv[3]
-	synonyms = sys.argv[4]
-	synonyms = synonyms.split(",")
-	notes = sys.argv[5:]
-	comments = ""
-	for note in notes:
-		comments += note + " "
+def add(lang,word,synonyms,comments):
 	ownThesaurus = Thesaurus(lang+".txt")
 	
 	foundwords = ownThesaurus.contains(word)
@@ -129,6 +123,18 @@ if command == "add":
 				sys.exit(0)
 		
 	ownThesaurus.add(word,synonyms,comments)
+
+# sspace add cthiote dhechøn throw,toss
+if command == "add":
+	lang = sys.argv[2]
+	word = sys.argv[3]
+	synonyms = sys.argv[4]
+	synonyms = synonyms.split(",")
+	notes = sys.argv[5:]
+	comments = ""
+	for note in notes:
+		comments += note + " "
+	add(lang,word,synonyms,comments)
 	
 # sspace find cthiote throw 
 elif command == "find":
@@ -149,6 +155,7 @@ elif command == "find":
 		print "Nothing found."
 	sys.exit(0)
 	
+# sspace show cthiote throw 
 elif command == "show":
 	lang = sys.argv[2]
 	word = sys.argv[3]
@@ -162,6 +169,64 @@ elif command == "show":
 	
 	for word in foundwords:
 		word.printWord()
+
+# sspace wordlist cthiote swadesh.txt
+elif command == "wordlist":
+	lang = sys.argv[2]
+	listfilename = sys.argv[3]
+	import phongen
+	import random
+
+	listfile = open(listfilename,"r")
+	wordlist = listfile.readlines()
+	listfile.close()
+	random.shuffle(wordlist)
+
+	engThesaurus = Thesaurus()
+
+
+	for listword in wordlist:
+		ownThesaurus = Thesaurus(lang+".txt")
+		print
+		foundword = searchForClosestWord(listword,ownThesaurus,engThesaurus,2)
+		print "New word: "+listword
+		if foundword:
+			print "Closest match:"
+			foundword.printWord()
+		else:
+			print "No similar words found."
+		while True:
+			decide = raw_input("Add a new word? y/n/(s)earch: ")
+			if decide == "s":
+				searchword = raw_input("Search for: ")
+				foundword = searchForClosestWord(searchword,ownThesaurus,engThesaurus,2)
+				if foundword:
+					print "Closest match:"
+					foundword.printWord()
+				else:
+					print "No similar words found."
+			else:
+				break
+		
+		if decide != "y":
+			continue
+
+		while True:
+			suggestion = phongen.NewWord()
+			print "Suggested word: "+suggestion
+			decide = raw_input("(u)se, (g)enerate new, (c)hange: ")
+			if decide == "u":
+				chosenword = suggestion
+				break
+			elif decide == "c":
+				chosenword = raw_input("New word: ")
+				break
+
+		synonyms = raw_input("Synonyms:" )
+		synonyms = synonyms.split(",")
+		notes = raw_input("Notes:" )
+		add(lang,chosenword,synonyms,notes)
+		print "Word added."
 
 else:
 	help()

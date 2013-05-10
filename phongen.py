@@ -47,9 +47,9 @@ def NewWord():
 		word += DistPick(iV)
 	else:
 		word += DistPick(V1)
-	if random.random() < 0.4:
+	if random.random() < 0.6:
 		word += DistPick(C2)
-	if random.random() < 0.3:
+	if random.random() < 0.4:
 		word += NewWord()
 	return word
 

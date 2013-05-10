@@ -33,7 +33,7 @@ class Word:
 			print "Notes: " + self.notes
 
 class Thesaurus:
-	def __init__(self,datafile="/files/Files/conlang/langtools/mthes10/mthesaur.txt"):
+	def __init__(self,datafile="/home/ptsnoop/langtools/mthes10/mthesaur.txt"):
 		self.datafile = datafile
 		self.words = []
 		#try:
