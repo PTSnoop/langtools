@@ -2,6 +2,7 @@
 # coding=utf-8
 
 import sys,os,random
+import phongen
 from langthesaurus import *
 
 def help():
@@ -92,6 +93,35 @@ def searchForClosestWord(inword,langThes,spaceThes=0,depth=2,skip=0):
 					
 	return False
 		
+def wordAddWiz(lang):
+	engThesaurus = Thesaurus()
+	ownThesaurus = Thesaurus(lang+".txt")
+	while True:
+		suggestion = phongen.NewWord()
+		print "Suggested word: "+suggestion
+		decide = raw_input("(u)se, (g)enerate new, (c)hange, (s)earch: ")
+		if decide == "s":
+			searchword = raw_input("Search for: ")
+			foundword = searchForClosestWord(searchword,ownThesaurus,engThesaurus,2)
+			if foundword:
+				print "Closest match:"
+				foundword.printWord()
+			else:
+				print "No similar words found."
+		elif decide == "u":
+			chosenword = suggestion
+			break
+		elif decide == "c":
+			chosenword = raw_input("New word: ")
+			break
+
+	synonyms = raw_input("Synonyms:" )
+	synonyms = synonyms.split(",")
+	notes = raw_input("Notes:" )
+	add(lang,chosenword,synonyms,notes)
+	print "Word added."
+
+
 #import cProfile
 #cProfile.run("oldSearchForClosestWord(\"spade\",Thesaurus(\"cthiote.txt\"),Thesaurus(),3,0)", "searchForClosestWord.profile")
 #import pstats
@@ -120,7 +150,7 @@ def add(lang,word,synonyms,comments):
 		else:
 			continueAnyway = raw_input("Continue anyway? y/n: ")
 			if continueAnyway != "y":
-				sys.exit(0)
+				return
 		
 	ownThesaurus.add(word,synonyms,comments)
 
@@ -174,8 +204,6 @@ elif command == "show":
 elif command == "wordlist":
 	lang = sys.argv[2]
 	listfilename = sys.argv[3]
-	import phongen
-	import random
 
 	listfile = open(listfilename,"r")
 	wordlist = listfile.readlines()
@@ -211,23 +239,11 @@ elif command == "wordlist":
 		if decide != "y":
 			continue
 
-		while True:
-			suggestion = phongen.NewWord()
-			print "Suggested word: "+suggestion
-			decide = raw_input("(u)se, (g)enerate new, (c)hange: ")
-			if decide == "u":
-				chosenword = suggestion
-				break
-			elif decide == "c":
-				chosenword = raw_input("New word: ")
-				break
-
-		synonyms = raw_input("Synonyms:" )
-		synonyms = synonyms.split(",")
-		notes = raw_input("Notes:" )
-		add(lang,chosenword,synonyms,notes)
-		print "Word added."
-
+		wordAddWiz(lang)
+elif command == "new":
+	lang = sys.argv[2]
+	while True:
+		wordAddWiz(lang)
 else:
 	help()
 
