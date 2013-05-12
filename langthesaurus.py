@@ -33,7 +33,8 @@ class Word:
 			print "Notes: " + self.notes
 
 class Thesaurus:
-	def __init__(self,datafile="/home/ptsnoop/langtools/mthes10/mthesaur.txt"):
+	#def __init__(self,datafile="/home/ptsnoop/langtools/mthes10/mthesaur.txt"):
+	def __init__(self,datafile="/files/Files/conlang/langtools/mthes10/mthesaur.txt"):
 		self.datafile = datafile
 		self.words = []
 		#try:
@@ -113,8 +114,52 @@ class Thesaurus:
 		th = open(self.datafile,"a+")
 		th.write(saveline)
 		th.close()
+		
+	def searchForClosestWord(self,inword,spaceThes=0,depth=2,skip=0):
+		if spaceThes == 0:
+			spaceThes = Thesaurus()
+		stack = {}
 
-#if __name__ == "__main__":
-#	import random
-#	thesaurus = Thesaurus()
-#	random.choice(thesaurus.words).printWord()
+		stack[inword] = 0
+		skipwords = []
+
+		for i in range(depth):
+			newstack = {}
+			for stackword in stack:
+				if stack[stackword] != 0:
+					continue
+				if stackword in skipwords:
+					continue
+				# check if this word exists in the language
+				exists = self.synonymmed(stackword)
+				if exists != []:
+					for existingword in exists:
+						if existingword in skipwords:
+							continue
+
+						if skip == 0:
+							return existingword
+						elif skip == -1:
+							skipwords.append(existingword)
+						else:
+							skipwords.append(existingword)
+							skip -= 1
+				#if we're still here, we've not found it yet.
+				synonyms = spaceThes.synonymmed(stackword)
+				for synonym in synonyms:
+					if synonym in stack:
+						continue
+					newstack[synonym.wordname] = 0
+				stack[stackword] = 1
+				if skip == -1:
+					if len(skipwords) != 0:
+						return skipwords
+			for newstackword in newstack:
+				stack[newstackword] = newstack[newstackword]
+						
+		return False
+
+if __name__ == "__main__":
+	import random
+	thesaurus = Thesaurus()
+	random.choice(thesaurus.words).printWord()

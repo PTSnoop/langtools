@@ -92,6 +92,25 @@ def searchForClosestWord(inword,langThes,spaceThes=0,depth=2,skip=0):
 			stack[newstackword] = newstack[newstackword]
 					
 	return False
+
+def add(lang,word,synonyms,comments):
+	ownThesaurus = Thesaurus(lang+".txt")
+	
+	foundwords = ownThesaurus.contains(word)
+	if foundwords != []:
+		print "Word already found."
+		for foundword in foundwords:
+			foundword.printWord()
+		replace = raw_input("Replace it? y/n: ")
+		if replace == "y":
+			ownThesaurus.remove(word)
+			ownThesaurus.add(word,synonyms,comments)
+		else:
+			continueAnyway = raw_input("Continue anyway? y/n: ")
+			if continueAnyway != "y":
+				return
+		
+	ownThesaurus.add(word,synonyms,comments)
 		
 def wordAddWiz(lang):
 	engThesaurus = Thesaurus()
@@ -120,6 +139,7 @@ def wordAddWiz(lang):
 	notes = raw_input("Notes:" )
 	add(lang,chosenword,synonyms,notes)
 	print "Word added."
+	return chosenword
 
 
 #import cProfile
@@ -129,121 +149,106 @@ def wordAddWiz(lang):
 #stats.strip_dirs().sort_stats('time').print_stats()
 #sys.exit(0)
 
-if len(sys.argv) <= 1:
-	help()
-	sys.exit(0)
-
-command = sys.argv[1]
-
-def add(lang,word,synonyms,comments):
-	ownThesaurus = Thesaurus(lang+".txt")
+if __name__ == "__main__":
 	
-	foundwords = ownThesaurus.contains(word)
-	if foundwords != []:
-		print "Word already found."
-		for foundword in foundwords:
-			foundword.printWord()
-		replace = raw_input("Replace it? y/n: ")
-		if replace == "y":
-			ownThesaurus.remove(word)
-			ownThesaurus.add(word,synonyms,comments)
-		else:
-			continueAnyway = raw_input("Continue anyway? y/n: ")
-			if continueAnyway != "y":
-				return
-		
-	ownThesaurus.add(word,synonyms,comments)
-
-# sspace add cthiote dhechøn throw,toss
-if command == "add":
-	lang = sys.argv[2]
-	word = sys.argv[3]
-	synonyms = sys.argv[4]
-	synonyms = synonyms.split(",")
-	notes = sys.argv[5:]
-	comments = ""
-	for note in notes:
-		comments += note + " "
-	add(lang,word,synonyms,comments)
-	
-# sspace find cthiote throw 
-elif command == "find":
-	lang = sys.argv[2]
-	word = sys.argv[3]
-
-	if len(sys.argv) >= 5:
-		skip = int(sys.argv[4])
-	else:
-		skip = 0
-	ownThesaurus = Thesaurus(lang+".txt")
-	engThesaurus = Thesaurus()
-	
-	foundword = searchForClosestWord(word,ownThesaurus,engThesaurus,2,skip)
-	if foundword:
-		foundword.printWord()
-	else:
-		print "Nothing found."
-	sys.exit(0)
-	
-# sspace show cthiote throw 
-elif command == "show":
-	lang = sys.argv[2]
-	word = sys.argv[3]
-	ownThesaurus = Thesaurus(lang+".txt")
-	foundwords = ownThesaurus.contains(word)
-	if foundwords != []:
-		for foundword in foundwords:
-			foundword.printWord()
-			print
+	if len(sys.argv) <= 1:
+		help()
 		sys.exit(0)
 	
-	for word in foundwords:
-		word.printWord()
-
-# sspace wordlist cthiote swadesh.txt
-elif command == "wordlist":
-	lang = sys.argv[2]
-	listfilename = sys.argv[3]
-
-	listfile = open(listfilename,"r")
-	wordlist = listfile.readlines()
-	listfile.close()
-	#random.shuffle(wordlist)
-
-	engThesaurus = Thesaurus()
-
-
-	for listword in wordlist:
+	command = sys.argv[1]
+	
+	# sspace add cthiote dhechøn throw,toss
+	if command == "add":
+		lang = sys.argv[2]
+		word = sys.argv[3]
+		synonyms = sys.argv[4]
+		synonyms = synonyms.split(",")
+		notes = sys.argv[5:]
+		comments = ""
+		for note in notes:
+			comments += note + " "
+		add(lang,word,synonyms,comments)
+		
+	# sspace find cthiote throw 
+	elif command == "find":
+		lang = sys.argv[2]
+		word = sys.argv[3]
+	
+		if len(sys.argv) >= 5:
+			skip = int(sys.argv[4])
+		else:
+			skip = 0
 		ownThesaurus = Thesaurus(lang+".txt")
-		print
-		foundword = searchForClosestWord(listword,ownThesaurus,engThesaurus,2)
-		print "New word: "+listword
+		engThesaurus = Thesaurus()
+		
+		foundword = searchForClosestWord(word,ownThesaurus,engThesaurus,2,skip)
 		if foundword:
-			print "Closest match:"
 			foundword.printWord()
 		else:
-			print "No similar words found."
-		while True:
-			decide = raw_input("Add a new word? y/n/(s)earch: ")
-			if decide == "s":
-				searchword = raw_input("Search for: ")
-				foundword = searchForClosestWord(searchword,ownThesaurus,engThesaurus,2)
-				if foundword:
-					print "Closest match:"
-					foundword.printWord()
-				else:
-					print "No similar words found."
-			else:
-				break
+			print "Nothing found."
+		sys.exit(0)
 		
-		if decide != "y":
-			continue
-
-		wordAddWiz(lang)
-elif command == "new":
-	lang = sys.argv[2]
-	while True:
-		wordAddWiz(lang)
-else:
-	help()
-
+	# sspace show cthiote throw 
+	elif command == "show":
+		lang = sys.argv[2]
+		word = sys.argv[3]
+		ownThesaurus = Thesaurus(lang+".txt")
+		foundwords = ownThesaurus.contains(word)
+		if foundwords != []:
+			for foundword in foundwords:
+				foundword.printWord()
+				print
+			sys.exit(0)
+		
+		for word in foundwords:
+			word.printWord()
+	
+	# sspace wordlist cthiote swadesh.txt
+	elif command == "wordlist":
+		lang = sys.argv[2]
+		listfilename = sys.argv[3]
+	
+		listfile = open(listfilename,"r")
+		wordlist = listfile.readlines()
+		listfile.close()
+		#random.shuffle(wordlist)
+	
+		engThesaurus = Thesaurus()
+	
+	
+		for listword in wordlist:
+			listword = listword.translate(None,".,!\n")
+			ownThesaurus = Thesaurus(lang+".txt")
+			print
+			foundword = searchForClosestWord(listword,ownThesaurus,engThesaurus,2)
+			print "New word: "+listword
+			if foundword:
+				print "Closest match:"
+				foundword.printWord()
+			else:
+				print "No similar words found."
+			while True:
+				decide = raw_input("Add a new word? y/n/(s)earch: ")
+				if decide == "s":
+					searchword = raw_input("Search for: ")
+					foundword = searchForClosestWord(searchword,ownThesaurus,engThesaurus,2)
+					if foundword:
+						print "Closest match:"
+						foundword.printWord()
+					else:
+						print "No similar words found."
+				else:
+					break
+			
+			if decide != "y":
+				continue
+	
+			wordAddWiz(lang)
+	elif command == "new":
+		lang = sys.argv[2]
+		while True:
+			wordAddWiz(lang)
+	else:
+		help()
+	
+	
