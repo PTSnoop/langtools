@@ -1,12 +1,19 @@
 #!/usr/bin/python
 
-#usage: autogloss.py Qituva this be-PRES DEF gloss-text-SING. 
 
 import sys,random,re
 import sspace
 from langthesaurus import *
 
-splitters = [" ","-","\n",".",","]
+if len(sys.argv) == 1 or sys.argv[1] == "help":
+	print """Usage: 
+	autogloss.py Qituva this be-PRES DEF gloss-text-SING.
+or:
+	autogloss.py Qituva in.txt out.txt
+	"""
+	sys.exit(0)
+
+splitters = [" ","-","\n",".",",","*","!","?"]
 
 def isNumber(s):
     try:
@@ -126,6 +133,7 @@ if __name__ == "__main__":
 		if outfile:
 			g = open(outfile,"a+")
 			g.write(result)
+			g.write("\n")
 			g.close()
 		print
 		print result
