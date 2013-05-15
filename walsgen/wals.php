@@ -15,6 +15,8 @@
 
 <p>Each parameter is randomized independently, so any results here will blatantly ignore universals, elegance, and in many cases basic mathematics. You'll often see serious indecision over whether a language has cases or genders, or what word order should be used. Be alert.</p>
 
+<p>Refresh the page to generate a new set of features.</p>
+
 <p>All data from <a href="http://wals.info/feature">http://wals.info/feature</a>.</p>
 
 <?php
