@@ -5,14 +5,14 @@ import random
 import sys
 
 C = [
-	'pp',	'tt',	'kk',	
+	'p',	't',	'k',	
 	'ph',	'th',	'kh',	
 	'f',	's','z','c',
 	'm',	'n',	'ng',
 	'u',	'i','l','r',
 ]
-C1 = [ 's','th','ph','n','c','n','l','kh','tt','pp','ng','m','r','f','i','u','kk','z']
-C2 = [ 'n','s','c','th','l','ph','kh','z','ng','m','f','kk','pp','tt','r']
+C1 = [ 's','th','ph','n','c','n','l','kh','t','p','ng','m','r','f','i','u','k','z']
+C2 = [ 'n','s','c','th','l','ph','kh','z','ng','m','f','k','p','t','r']
 
 I = ['i','l','n','s']
 

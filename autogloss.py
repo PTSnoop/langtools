@@ -3,6 +3,8 @@
 
 import sys,random,re
 import sspace
+from convert import *
+from soundchange import *
 from langthesaurus import *
 
 if len(sys.argv) == 1 or sys.argv[1] == "help":
@@ -109,7 +111,7 @@ def autogloss(lang,inGloss,interactive):
 			currword = ""
 			
 		
-	return finaltext
+	return finaltext,interlin
 
 if __name__ == "__main__":
 	lang = sys.argv[1]
@@ -122,6 +124,7 @@ if __name__ == "__main__":
 		
 	f = open(sys.argv[2])
 	lines = f.readlines()
+	f.close()
 	
 	if len(sys.argv) > 3:
 		outfile = sys.argv[3]
@@ -129,10 +132,15 @@ if __name__ == "__main__":
 		outfile = False
 	
 	for line in lines:
-		result = autogloss(lang,line,True)
+		result,interlin = autogloss(lang,line,True)
+		result = result.replace(",",", ")
 		if outfile:
 			g = open(outfile,"a+")
-			g.write(result)
+			topline = soundchange(result.replace("-",""))
+			g.write(alloToRoman(topline+"\n"))
+			g.write("["+alloToIpa(topline)+"]\n")
+			g.write(result+"\n")
+			g.write(line+"\n")
 			g.write("\n")
 			g.close()
 		print
