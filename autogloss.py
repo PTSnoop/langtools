@@ -140,7 +140,7 @@ if __name__ == "__main__":
 			g.write(alloToRoman(topline+"\n"))
 			g.write("["+alloToIpa(topline)+"]\n")
 			g.write(result+"\n")
-			g.write(line+"\n")
+			g.write(interlin+"\n")
 			g.write("\n")
 			g.close()
 		print

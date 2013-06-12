@@ -24,6 +24,15 @@ V = [
 V1 = ['i','a','e','o','ia','ø','ai','u','ua','au','ʉ']
 iV = ['a','e','o','ø','u','ʉ','au','ai']
 
+Va = [
+	"í","ʉ́",       "ú",
+	  "é","ǿ",  "ó",
+	     "á",
+]
+V1a = ['í','á','é','ó','iá','ǿ','ái','ú','uá','áu','ʉ́']
+iVa = ['á','é','ó','ǿ','ú','ʉ́','áu','ái']
+
+
 def DistPick(A):
 	size = len(A)+1
 	B = []
@@ -39,18 +48,26 @@ def DistPick(A):
 			picknum -= B[thing]
 	return A[0]
 
-def NewWord():
+def NewWord(pitched=False):
 	word = ""
 	word += DistPick(C1)
 	if random.random() < 0.3:
-		word += DistPick(I)
-		word += DistPick(iV)
+		if random.random() < 0.3:
+			word += DistPick(I)
+			word += DistPick(iVa)
+		else:
+			word += DistPick(V1a)
+		pitched=True
 	else:
-		word += DistPick(V1)
+		if random.random() < 0.3:
+			word += DistPick(I)
+			word += DistPick(iV)
+		else:
+			word += DistPick(V1)
 	if random.random() < 0.6:
 		word += DistPick(C2)
 	if random.random() < 0.4:
-		word += NewWord()
+		word += NewWord(pitched)
 	return word
 
 if __name__ == "__main__":

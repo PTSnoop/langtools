@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # coding=utf-8
 
+from collections import OrderedDict
 import random
 import re
 import sys
@@ -26,66 +27,31 @@ V = [
 	 'e','ø',  'o',
 	     'a',
 	'E','I','O','1','2',
+	'í','ʉ́',      'ú',
+	 'é','ǿ',  'ó',
+	     'á',
+	'É','Í','Ó','Ý','ǿ',
+]
+Vna = [
+	'i','ʉ',      'u',
+	 'e','ø',  'o',
+	     'a',
+	'E','I','O','1','2',
+]
+Va = [
+	'í','ʉ́',      'ú',
+	 'é','ǿ',  'ó',
+	     'á',
+	'É','Í','Ó','Ý','ǿ',
 ]
 
-clusters = {}
-clusters["pp"] = ":p"
-clusters["pt"] = ":t"
-clusters["pk"] = ":k"
-clusters["pph"] = ":ph"
-clusters["pth"] = ":th"
-clusters["pkh"] = ":kh"
-clusters["pf"]  = "pf"
-clusters["ps"]  = "ps"
-clusters["pz"]  = "ps"
-clusters["pc"]  = "pr"
-clusters["pm"]  = ":m"
-clusters["pn"]  = ":n"
-clusters["png"] = ":n"
-clusters["pŋ"]  = ":n"
-clusters["pl"]  = "pl"
-clusters["pr"]  = "par"
-
-clusters["tp"] = "tp"
-clusters["tt"] = ":t"
-clusters["tk"] = ":k"
-clusters["tph"] = "tph"
-clusters["tth"] = ":th"
-clusters["tkh"] = ":kh"
-clusters["tf"]  = "tf"
-clusters["ts"]  = "ts"
-clusters["tz"]  = "tz"
-clusters["tc"]  = "tr"
-clusters["tm"]  = "tm"
-clusters["tn"]  = "tn"
-clusters["tng"] = "tn"
-clusters["tŋ"]  = "tn"
-clusters["tl"]  = "tl"
-clusters["tr"]  = "tar"
-
-clusters["kp"] = "kp"
-clusters["kt"] = "kt"
-clusters["kk"] = ":k"
-clusters["kph"] = "kph"
-clusters["kth"] = "kth"
-clusters["kkh"] = ":kh"
-clusters["kf"]  = "kf"
-clusters["ks"]  = "ks"
-clusters["kz"]  = "kz"
-clusters["kc"]  = ":c"
-clusters["km"]  = "kng"
-clusters["kn"]  = "kn"
-clusters["kng"] = "kng"
-clusters["kŋ"]  = "kŋ"
-clusters["kl"]  = "kl"
-clusters["kr"]  = "kar"
-
-clusters["php"] = ":ph"
-clusters["pht"] = ":th"
-clusters["phk"] = ":kh"
+clusters = OrderedDict()
 clusters["phph"] = ":ph"
 clusters["phth"] = ":th"
 clusters["phkh"] = ":kh"
+clusters["php"] = ":ph"
+clusters["pht"] = ":th"
+clusters["phk"] = ":kh"
 clusters["phf"]  = "pf"
 clusters["phs"]  = "ps"
 clusters["phz"]  = "ps"
@@ -97,12 +63,12 @@ clusters["phŋ"]  = ":n"
 clusters["phl"]  = "pl"
 clusters["phr"]  = "par"
 
-clusters["thp"] = ":p"
-clusters["tht"] = ":th"
-clusters["thk"] = ":k"
 clusters["thph"] = ":ph"
 clusters["thth"] = ":th"
 clusters["thkh"] = ":kh"
+clusters["thp"] = ":p"
+clusters["tht"] = ":th"
+clusters["thk"] = ":k"
 clusters["thf"]  = "tf"
 clusters["ths"]  = "ts"
 clusters["thz"]  = "tz"
@@ -114,29 +80,81 @@ clusters["thŋ"]  = ":ŋ"
 clusters["thl"]  = "tl"
 clusters["thr"]  = "thar"
 
-clusters["khp"] = ":p"
-clusters["kht"] = ":t"
-clusters["khk"] = ":kh"
 clusters["khph"] = ":ph"
 clusters["khth"] = ":th"
 clusters["khkh"] = ":kh"
+clusters["khp"] = ":p"
+clusters["kht"] = ":t"
+clusters["khk"] = ":kh"
 clusters["khf"]  = "kf"
 clusters["khs"]  = "ks"
 clusters["khz"]  = "kz"
 clusters["khc"]  = ":c"
-clusters["khm"]  = "kng"
-clusters["khn"]  = "kn"
-clusters["khng"] = "kng"
-clusters["khŋ"]  = "kŋ"
+clusters["khm"]  = ":ng"
+clusters["khn"]  = ":n"
+clusters["khng"] = ":ng"
+clusters["khŋ"]  = ":ŋ"
 clusters["khl"]  = "kl"
 clusters["khr"]  = "khar"
 
-clusters["fp"] = "pf"
-clusters["ft"] = "tf"
-clusters["fk"] = "kf"
+clusters["pph"] = ":ph"
+clusters["pth"] = ":th"
+clusters["pkh"] = ":kh"
+clusters["pp"] = ":p"
+clusters["pt"] = ":t"
+clusters["pk"] = ":k"
+clusters["pf"]  = "pf"
+clusters["ps"]  = "ps"
+clusters["pz"]  = "ps"
+clusters["pc"]  = "pr"
+clusters["pm"]  = ":m"
+clusters["pn"]  = ":n"
+clusters["png"] = ":n"
+clusters["pŋ"]  = ":n"
+clusters["pl"]  = "pl"
+clusters["pr"]  = "par"
+
+clusters["tph"] = "tph"
+clusters["tth"] = ":th"
+clusters["tkh"] = ":kh"
+clusters["tp"] = "tp"
+clusters["tt"] = ":t"
+clusters["tk"] = ":k"
+clusters["tf"]  = "tf"
+clusters["ts"]  = "ts"
+clusters["tz"]  = "tz"
+clusters["tc"]  = "tr"
+clusters["tm"]  = ":m"
+clusters["tn"]  = ":n"
+clusters["tng"] = ":n"
+clusters["tŋ"]  = ":n"
+clusters["tl"]  = "tl"
+clusters["tr"]  = "tar"
+
+clusters["kph"] = "kph"
+clusters["kth"] = "kth"
+clusters["kkh"] = ":kh"
+clusters["kp"] = "kp"
+clusters["kt"] = "kt"
+clusters["kk"] = ":k"
+clusters["kf"]  = "kf"
+clusters["ks"]  = "ks"
+clusters["kz"]  = "kz"
+clusters["kc"]  = ":c"
+clusters["km"]  = ":ng"
+clusters["kn"]  = ":n"
+clusters["kng"] = ":ng"
+clusters["kŋ"]  = ":ŋ"
+clusters["kl"]  = "kl"
+clusters["kr"]  = "kar"
+
+
 clusters["fph"] = "pf"
 clusters["fth"] = "tf"
 clusters["fkh"] = "kf"
+clusters["fp"] = "pf"
+clusters["ft"] = "tf"
+clusters["fk"] = "kf"
 clusters["ff"]  = ":f"
 clusters["fs"]  = ":s"
 clusters["fz"]  = ":f"
@@ -148,12 +166,12 @@ clusters["fŋ"]  = "fn"
 clusters["fl"]  = "fl"
 clusters["fr"]  = "far"
 
-clusters["sp"] = "ps"
-clusters["st"] = "ts"
-clusters["sk"] = "ks"
 clusters["sph"] = "ps"
 clusters["sth"] = "ts"
 clusters["skh"] = "ks"
+clusters["sp"] = "ps"
+clusters["st"] = "ts"
+clusters["sk"] = "ks"
 clusters["sf"]  = "fs"
 clusters["ss"]  = ":s"
 clusters["sz"]  = ":z"
@@ -165,12 +183,12 @@ clusters["sŋ"]  = "sn"
 clusters["sl"]  = "sl"
 clusters["sr"]  = "sar"
 
-clusters["zp"] = "pz"
-clusters["zt"] = "tz"
-clusters["zk"] = "kz"
 clusters["zph"] = "pz"
 clusters["zth"] = "tz"
 clusters["zkh"] = "kz"
+clusters["zp"] = "pz"
+clusters["zt"] = "tz"
+clusters["zk"] = "kz"
 clusters["zf"]  = "tz"
 clusters["zs"]  = "tz"
 clusters["zz"]  = ":z"
@@ -182,12 +200,12 @@ clusters["zŋ"]  = "zm"
 clusters["zl"]  = "sl"
 clusters["zr"]  = "zar"
 
-clusters["cp"] = "cp"
-clusters["ct"] = "ct"
-clusters["ck"] = "ck"
 clusters["cph"] = "cph"
 clusters["cth"] = "cth"
 clusters["ckh"] = "ckh"
+clusters["cp"] = "cp"
+clusters["ct"] = "ct"
+clusters["ck"] = "ck"
 clusters["cf"]  = ":c"
 clusters["cs"]  = "cs"
 clusters["cz"]  = "cs"
@@ -197,15 +215,15 @@ clusters["cn"]  = "cn"
 clusters["cng"] = "cng"
 clusters["cŋ"]  = "cŋ"
 clusters["cl"]  = "cl"
-clusters["cr"]  = "car"
+clusters["cr"]  = "r"
 
-clusters["mp"] = "pm"
-clusters["mt"] = "tn"
-clusters["mk"] = "kng"
-clusters["mph"] = "pm"
-clusters["mth"] = "tn"
-clusters["mkh"] = "kng"
-clusters["mf"]  = "tn"
+clusters["mph"] = "mph"
+clusters["mth"] = "nth"
+clusters["mkh"] = "ngkh"
+clusters["mp"] = "mp"
+clusters["mt"] = "nt"
+clusters["mk"] = "ngk"
+clusters["mf"]  = "fm"
 clusters["ms"]  = "sn"
 clusters["mz"]  = "zn"
 clusters["mc"]  = "cng"
@@ -216,13 +234,13 @@ clusters["mŋ"]  = "ŋ"
 clusters["ml"]  = "ml"
 clusters["mr"]  = "mar"
 
-clusters["np"] = "pm"
-clusters["nt"] = "tn"
-clusters["nk"] = "kng"
-clusters["nph"] = "pm"
-clusters["nth"] = "tn"
-clusters["nkh"] = "kng"
-clusters["nf"]  = "tn"
+clusters["nph"] = "mph"
+clusters["nth"] = "nth"
+clusters["nkh"] = "ngkh"
+clusters["np"] = "mp"
+clusters["nt"] = "nt"
+clusters["nk"] = "ngk"
+clusters["nf"]  = "fn"
 clusters["ns"]  = "sn"
 clusters["nz"]  = "zn"
 clusters["nc"]  = "cng"
@@ -233,12 +251,12 @@ clusters["nŋ"]  = "ŋ"
 clusters["nl"]  = "nl"
 clusters["nr"]  = "nar"
 
-clusters["ŋp"] = "pm"
-clusters["ŋt"] = "tn"
-clusters["ŋk"] = "kŋ"
-clusters["ŋph"] = "pm"
-clusters["ŋth"] = "tn"
-clusters["ŋkh"] = "kŋ"
+clusters["ŋph"] = "mph"
+clusters["ŋth"] = "nth"
+clusters["ŋkh"] = "ŋkh"
+clusters["ŋp"] = "mp"
+clusters["ŋt"] = "nt"
+clusters["ŋk"] = "ŋk"
 clusters["ŋf"]  = "fŋ"
 clusters["ŋs"]  = "sn"
 clusters["ŋz"]  = "zn"
@@ -250,12 +268,12 @@ clusters["ŋŋ"]  = "ŋ"
 clusters["ŋl"]  = "ŋl"
 clusters["ŋr"]  = "ŋar"
 
-clusters["ngp"] = "pm"
-clusters["ngt"] = "tn"
-clusters["ngk"] = "kng"
-clusters["ngph"] = "pm"
-clusters["ngth"] = "tn"
-clusters["ngkh"] = "kng"
+clusters["ngph"] = "mph"
+clusters["ngth"] = "nth"
+clusters["ngkh"] = "ngkh"
+clusters["ngp"] = "mp"
+clusters["ngt"] = "nt"
+clusters["ngk"] = "ngk"
 clusters["ngf"]  = "fng"
 clusters["ngs"]  = "sn"
 clusters["ngz"]  = "zn"
@@ -267,12 +285,12 @@ clusters["ngŋ"]  = "ŋ"
 clusters["ngl"]  = "ngl"
 clusters["ngr"]  = "ngar"
 
-clusters["lp"] = "pl"
-clusters["lt"] = "tl"
-clusters["lk"] = "kl"
 clusters["lph"] = "pl"
 clusters["lth"] = "tl"
 clusters["lkh"] = "kl"
+clusters["lp"] = "pl"
+clusters["lt"] = "tl"
+clusters["lk"] = "kl"
 clusters["lf"]  = "fl"
 clusters["ls"]  = "sl"
 clusters["lz"]  = "zl"
@@ -284,12 +302,12 @@ clusters["lŋ"]  = "ŋl"
 clusters["ll"]  = "l"
 clusters["lr"]  = "lar"
 
-clusters["rp"] = "rap"
-clusters["rt"] = "rat"
-clusters["rk"] = "rak"
 clusters["rph"] = "raph"
 clusters["rth"] = "rath"
 clusters["rkh"] = "rakh"
+clusters["rp"] = "rap"
+clusters["rt"] = "rat"
+clusters["rk"] = "rak"
 clusters["rf"]  = "raf"
 clusters["rs"]  = "ras"
 clusters["rz"]  = "raz"
@@ -301,15 +319,22 @@ clusters["rŋ"]  = "raŋ"
 clusters["rl"]  = "ral"
 clusters["rr"]  = "r"
 
+clusters["::"] = ":"
+clusters[" :"] = ""
+
 def soundchange(intext):
 	print
-	outtext = intext.lower()
+	outtext = " "+intext.lower()+" "
 	outtext = outtext.replace("\n","")
 	print outtext
 	outtext = outtext.replace("ng","ŋ")
 	# vowel assimilation
-	outtext = outtext.replace("iau","e:")
-	outtext = outtext.replace("iua","e:")
+
+	for i in ["i","í"]:
+		for a in ["a","á"]:
+			for u in ["u","ú"]:
+				outtext = outtext.replace(i+a+u,"é:")
+				outtext = outtext.replace(i+u+a,"é:")
 	print outtext
 
 	for v1 in V:
@@ -339,11 +364,15 @@ def soundchange(intext):
 		outtext = outtext.replace("e%si" % c1, "I%si" % c1)
 		outtext = outtext.replace("o%si" % c1, "ø%si" % c1)
 		outtext = outtext.replace("a%si" % c1, "E%si" % c1)
+		outtext = outtext.replace("é%si" % c1, "Í%si" % c1)
+		outtext = outtext.replace("ó%si" % c1, "ǿ%si" % c1)
+		outtext = outtext.replace("á%si" % c1, "É%si" % c1)
 
 	for c1 in C:
 		if c1 not in V:
 			for c2 in C:
 				outtext = outtext.replace("%su%si" % (c1,c2), "%sʉ%si" % (c1,c2))
+				outtext = outtext.replace("%sú%si" % (c1,c2), "%sʉ́%si" % (c1,c2))
 		
 	print outtext
 	for n in N:
@@ -377,12 +406,25 @@ def soundchange(intext):
 	outtext = outtext.replace("jʉ","j1")
 	outtext = outtext.replace("je","ja")
 	outtext = outtext.replace("jE","ja")
+	outtext = outtext.replace("jó","jÓ")
+	outtext = outtext.replace("jǿ","jÓ")
+	outtext = outtext.replace("jʉ́","jÝ")
+	outtext = outtext.replace("jé","já")
+	outtext = outtext.replace("jÉ","já")
 	#outtext = outtext.replace("j","i")
 	print outtext
 	for v1 in V:
 		for v2 in V:
 			if v1 != "u" and v2 != "u" and v1 != "i" and v2 != "i":
 				outtext = outtext.replace("%s%s" % (v1,v2),"%sl1" % (v1))
+	print outtext
+
+	for v in range(len(Va)):
+		for c in C:
+			outtext = outtext.replace(" %s%s" % (c,Va[v])," %s%s" % (c,Vna[v]))
+			outtext = outtext.replace(" %sj%s" % (c,Va[v])," %sj%s" % (c,Vna[v]))
+			outtext = outtext.replace(" %si%s" % (c,Va[v])," %si%s" % (c,Vna[v]))
+			outtext = outtext.replace(" %su%s" % (c,Va[v])," %su%s" % (c,Vna[v]))
 	print outtext
 	
 	for cc in clusters:	
