@@ -37,7 +37,7 @@ def DistPick(A):
 	size = len(A)+1
 	B = []
 	for thing in range(len(A)):
-		B.append( 100-(1-((1/size)*thing) ))
+                B.append( int(100*(1-((1.0/size)*thing) )))
 
 	picknum = random.randint(0,sum(B))
 
@@ -64,7 +64,7 @@ def NewWord(pitched=False):
 			word += DistPick(iV)
 		else:
 			word += DistPick(V1)
-	if random.random() < 0.6:
+	if random.random() < 0.4:
 		word += DistPick(C2)
 	if random.random() < 0.4:
 		word += NewWord(pitched)

@@ -41,6 +41,15 @@ def crass(thesaurus,iworkingset,inset,outset,level):
 			
 
 def parse(lang,intext):
+
+	intext = intext.replace("í","i")
+	intext = intext.replace("é","e")
+	intext = intext.replace("á","a")
+	intext = intext.replace("ó","o")
+	intext = intext.replace("ú","u")
+	intext = intext.replace("ǿ","ø")
+	intext = intext.replace("ʉ́","ʉ")
+
 	thesaurus = Thesaurus(lang+".txt")
 	random.shuffle(thesaurus.words)
 

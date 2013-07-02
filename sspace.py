@@ -117,7 +117,12 @@ def wordAddWiz(lang):
 	ownThesaurus = Thesaurus(lang+".txt")
 	while True:
 		suggestion = phongen.NewWord()
+		foundwords = ownThesaurus.contains(suggestion)
 		print "Suggested word: "+suggestion
+		if foundwords != []:
+			print "Word already found."
+			for foundword in foundwords:
+				foundword.printWord()
 		decide = raw_input("(u)se, (g)enerate new, (c)hange, (s)earch: ")
 		if decide == "s":
 			searchword = raw_input("Search for: ")
@@ -248,6 +253,11 @@ if __name__ == "__main__":
 		lang = sys.argv[2]
 		while True:
 			wordAddWiz(lang)
+	elif command == "random":
+		lang = sys.argv[2]
+		ownThesaurus = Thesaurus(lang+".txt")
+		word = random.choice(ownThesaurus.words)
+		word.printWord()
 	else:
 		help()
 	

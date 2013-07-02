@@ -320,7 +320,7 @@ clusters["rl"]  = "ral"
 clusters["rr"]  = "r"
 
 clusters["::"] = ":"
-clusters[" :"] = ""
+clusters[" :"] = " "
 
 def soundchange(intext):
 	print
