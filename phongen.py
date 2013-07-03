@@ -73,15 +73,37 @@ def NewWord(pitched=False):
 if __name__ == "__main__":
 
 	word = ""
+	paragraph = False
+	capital = False
+
 	if len(sys.argv) > 1:
-		noOfWords = int(sys.argv[1])
+		if sys.argv[1] == "lipsum":
+                        paragraph = True
+                        noOfWords = random.randint(600,1000)
+			capital = True
+                else:
+                        noOfWords = int(sys.argv[1])
+
 	else:
 		noOfWords = 1
 
 	while True:
-		word += NewWord()
-		word += " "
-		noOfWords -= 1
-		if noOfWords <= 0:
-			break
-	print word
+                nw = NewWord()
+                if capital:
+                        nw = nw.capitalize()
+                        capital = False
+                word += nw
+                if paragraph and random.random() < 0.15:
+                        word += "."
+                        capital = True
+                        if random.random() < 0.3:
+                                word += "\n\n"
+                elif paragraph and random.random() < 0.15:
+                        word += ","
+                if noOfWords <= 1:
+                        break
+                word += " "
+                noOfWords -= 1
+        if paragraph:
+                word += "."
+        print word
