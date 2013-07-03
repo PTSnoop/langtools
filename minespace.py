@@ -2,8 +2,6 @@
 # coding=utf-8
 
 import sys,os,random
-#import phongen
-from nitgen import *
 from langthesaurus import *
 
 def isInt(s):
@@ -26,7 +24,10 @@ sspace.wordAddWiz(lang)
 '''
 
 if __name__ == "__main__":
-	
+
+	import os
+	from os.getcwd()+"phongen" import *
+
 	if len(sys.argv) <= 1:
 		help()
 		sys.exit(0)
