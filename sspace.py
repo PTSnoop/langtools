@@ -2,6 +2,7 @@
 # coding=utf-8
 
 import sys,os,random
+sys.path.append(os.getcwd())
 import phongen
 from langthesaurus import *
 
