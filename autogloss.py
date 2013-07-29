@@ -15,7 +15,7 @@ or:
 	"""
 	sys.exit(0)
 
-splitters = [" ","-","\n",".",",","*","!","?"]
+splitters = [" ","-","\n",",","*","!","?"]
 
 def isNumber(s):
     try:
@@ -136,7 +136,7 @@ if __name__ == "__main__":
 		result = result.replace(",",", ")
 		if outfile:
 			g = open(outfile,"a+")
-			topline = soundchange(result.replace("-",""))
+			topline = soundchange(result.replace("-","").replace("\n",""))
 			g.write(alloToRoman(topline+"\n"))
 			g.write("["+alloToIpa(topline)+"]\n")
 			g.write(result+"\n")

@@ -1,0 +1,145 @@
+Consonant Inventories 
+Vowel Quality Inventories 
+Consonant-Vowel Ratio 
+Voicing in Plosives and Fricatives 
+Voicing and Gaps in Plosive Systems 
+Uvular Consonants 
+Glottalized Consonants 
+Lateral Consonants 
+The Velar Nasal 
+Vowel Nasalization 
+Front Rounded Vowels 
+Syllable Structure 
+Tone 
+Fixed Stress Locations 
+Weight-Sensitive Stress 
+Weight Factors in Weight-Sensitive Stress Systems 
+Rhythm Types 
+Absence of Common Consonants 
+Presence of Uncommon Consonants 
+Fusion of Selected Inflectional Formatives 
+Exponence of Selected Inflectional Formatives 
+Inflectional Synthesis of the Verb 
+Locus of Marking in the Clause 
+Locus of Marking in Possessive Noun Phrases 
+Locus of Marking: Whole-language Typology 
+Prefixing vs. Suffixing in Inflectional Morphology 
+Reduplication 
+Case Syncretism 
+Syncretism in Verbal Person/Number Marking 
+Number of Genders 
+Sex-based and Non-sex-based Gender Systems 
+Systems of Gender Assignment 
+Coding of Nominal Plurality 
+Occurrence of Nominal Plurality 
+Plurality in Independent Personal Pronouns 
+The Associative Plural 
+Definite Articles 
+Indefinite Articles 
+Inclusive/Exclusive Distinction in Independent Pronouns 
+Inclusive/Exclusive Distinction in Verbal Inflection 
+Distance Contrasts in Demonstratives 
+Pronominal and Adnominal Demonstratives 
+Third Person Pronouns and Demonstratives 
+Gender Distinctions in Independent Personal Pronouns 
+Politeness Distinctions in Pronouns 
+Indefinite Pronouns 
+Intensifiers and Reflexive Pronouns 
+Person Marking on Adpositions 
+Number of Cases 
+Asymmetrical Case-Marking 
+Position of Case Affixes 
+Comitatives and Instrumentals 
+Ordinal Numerals 
+Distributive Numerals 
+Numeral Classifiers 
+Conjunctions and Universal Quantifiers 
+Position of Pronominal Possessive Affixes 
+Obligatory Possessive Inflection 
+Possessive Classification 
+Genitives, Adjectives and Relative Clauses 
+Adjectives without Nouns 
+Action Nominal Constructions 
+Noun Phrase Conjunction 
+Nominal and Verbal Conjunction 
+Perfective/Imperfective Aspect 
+The Past Tense 
+The Future Tense 
+The Perfect 
+Position of Tense-Aspect Affixes 
+The Morphological Imperative 
+The Prohibitive 
+Imperative-Hortative Systems 
+The Optative 
+Situational Possibility 
+Epistemic Possibility 
+Overlap between Situational and Epistemic Modal Marking 
+Semantic Distinctions of Evidentiality 
+Coding of Evidentiality 
+Suppletion According to Tense and Aspect 
+Verbal Number and Suppletion 
+Order of Subject, Object and Verb 
+Order of Subject and Verb 
+Order of Object and Verb 
+Order of Object, Oblique, and Verb 
+Order of Adposition and Noun Phrase 
+Order of Genitive and Noun 
+Order of Adjective and Noun 
+Order of Demonstrative and Noun 
+Order of Numeral and Noun 
+Order of Relative Clause and Noun 
+Order of Degree Word and Adjective 
+Position of Polar Question Particles 
+Position of Interrogative Phrases in Content Questions 
+Order of Adverbial Subordinator and Clause 
+Relationship between the Order of Object and Verb and the Order of Adposition and Noun Phrase 
+Relationship between the Order of Object and Verb and the Order of Relative Clause and Noun 
+Relationship between the Order of Object and Verb and the Order of Adjective and Noun 
+Order of Negative Morpheme and Verb 
+Position of Negative Morpheme With Respect to Subject, Object and Verb 
+Alignment of Case Marking of Full Noun Phrases 
+Alignment of Case Marking of Pronouns 
+Alignment of Verbal Person Marking 
+Expression of Pronominal Subjects 
+Verbal Person Marking 
+Third Person Zero of Verbal Person Marking 
+Order of Person Markers on the Verb 
+Ditransitive Constructions: The Verb 'Give' 
+Reciprocal Constructions 
+Passive Constructions 
+Antipassive Constructions 
+Applicative Constructions 
+Periphrastic Causative Constructions 
+Nonperiphrastic Causative Constructions 
+Negative Morphemes 
+Symmetric and Asymmetric Standard Negation 
+Subtypes of Asymmetric Standard Negation 
+Negative Indefinite Pronouns and Predicate Negation 
+Polar Questions 
+Predicative Possession 
+Predicative Adjectives 
+Nominal and Locational Predication 
+Zero Copula for Predicate Nominals 
+Comparative Constructions 
+Relativization on Subjects 
+Relativization on Obliques 
+'Want' Complement Subjects 
+Purpose Clauses 
+'When' Clauses 
+Reason Clauses 
+Utterance Complement Clauses 
+Hand and Arm 
+Finger and Hand 
+Numeral Bases 
+Number of Non-Derived Basic Colour Categories 
+Number of Basic Colour Categories 
+Green and Blue 
+Red and Yellow 
+M-T Pronouns 
+N-M Pronouns 
+Tea 
+Irregular Negatives in Sign Languages 
+Question Particles in Sign Languages 
+Writing Systems 
+Para-Linguistic Usages of Clicks 
+Conlang type 

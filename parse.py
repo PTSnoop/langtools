@@ -2,10 +2,12 @@
 # coding=utf-8
 
 import sys
+sys.path.append(os.getcwd())
+import soundchange
 from langthesaurus import *
 import random
 
-splitters = [" ","-","\n",".",",","*","!","?"]
+splitters = [" ","-","\n",",","*","!","?"]
 
 def splat(text):
 	currword = ""

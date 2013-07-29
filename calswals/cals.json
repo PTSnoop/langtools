@@ -1,0 +1,962 @@
+{
+    "consonant inventory": {
+        "small": "76",
+        "moderately small": "130",
+        "average": "232",
+        "moderately large": "117",
+        "large": "47"
+    },
+    "vowel quality inventory": {
+        "small": "94",
+        "average": "255",
+        "large": "257"
+    },
+    "consonant-vowel ratio": {
+        "low": "86",
+        "moderately low": "113",
+        "average": "262",
+        "moderately high": "70",
+        "large": "50"
+    },
+    "voicing in plosives and fricatives": {
+        "no voicing contrast": "144",
+        "in plosives alone": "117",
+        "in fricatives alone": "48",
+        "in both plosives and fricatives": "285"
+    },
+    "voicing and gaps in plosive systems": {
+        "some missing, but not /p/ or /g/": "174",
+        "none missing in /p t k b d g/": "323",
+        "missing /p/": "30",
+        "missing /g/": "33",
+        "missing both /p/ and /g/": "19"
+    },
+    "uvular consonants": {
+        "none": "426",
+        "uvular stops": "39",
+        "uvular continuants": "63",
+        "uvular stops and continuants": "56"
+    },
+    "glottalized consonants": {
+        "no glottalized consonants": "473",
+        "ejectives only": "56",
+        "implosives only": "14",
+        "glottalized resonants only": "4",
+        "ejectives and implosives": "7",
+        "ejectives and glottalized resonants": "15",
+        "implosives and glottalized resonants": "2",
+        "ejectives, implosives, and glottalized resonants": "4"
+    },
+    "lateral consonants": {
+        "no laterals": "66",
+        "/l/, no obstruent laterals": "393",
+        "laterals, but no /l/, no obstruent laterals": "13",
+        "/l/ and lateral obstruent": "87",
+        "no /l/, but lateral obstruents": "20"
+    },
+    "the velar nasal": {
+        "initial velar nasal": "207",
+        "no initial velar nasal": "96",
+        "no velar nasal": "277"
+    },
+    "vowel nasalization": {
+        "present": "100",
+        "absent": "468"
+    },
+    "front rounded vowels": {
+        "none": "424",
+        "high and mid": "94",
+        "high only": "41",
+        "mid only": "12"
+    },
+    "syllable structure": {
+        "simple": "112",
+        "moderately complex": "284",
+        "complex": "182"
+    },
+    "tone": {
+        "no tones": "457",
+        "simple tone system": "89",
+        "complex tone system": "41"
+    },
+    "fixed stress locations": {
+        "no fixed stress": "261",
+        "initial": "87",
+        "second": "13",
+        "third": "3",
+        "antepenultimate": "8",
+        "penultimate": "76",
+        "ultimate": "41"
+    },
+    "weight-sensitive stress": {
+        "left-edge: first or second": "18",
+        "left-oriented: one of the first three": "14",
+        "right-edge: ultimate or penultimate": "45",
+        "right-oriented: one of the last three": "55",
+        "unbounded: stress can be anywhere": "57",
+        "combined: right-edge and unbounded": "12",
+        "not predictable": "52",
+        "fixed stress": "172"
+    },
+    "weight factors in weight-sensitive stress systems": {
+        "no weight": "187",
+        "long vowel": "39",
+        "coda consonant": "25",
+        "long vowel or coda consonant": "54",
+        "prominence": "19",
+        "lexical stress": "56",
+        "combined": "37"
+    },
+    "rhythm types": {
+        "trochaic": "111",
+        "iambic": "30",
+        "dual: both trochaic and iambic": "24",
+        "undetermined": "60",
+        "no rhythmic stress": "139"
+    },
+    "absence of common consonants": {
+        "all present": "515",
+        "no bilabials": "18",
+        "no fricatives": "18",
+        "no nasals": "9",
+        "no bilabials or nasals": "2",
+        "no fricatives or nasals": "1"
+    },
+    "presence of uncommon consonants": {
+        "none": "343",
+        "clicks": "11",
+        "labial-velars": "19",
+        "pharyngeals": "21",
+        "'th' sounds": "148",
+        "clicks, pharyngeals, and 'th'": "12",
+        "pharyngeals and 'th'": "12"
+    },
+    "fusion of selected inflectional formatives": {
+        "exclusively concatenative": "259",
+        "exclusively isolating": "47",
+        "exclusively tonal": "2",
+        "tonal/isolating": "5",
+        "tonal/concatenative": "5",
+        "ablaut/concatenative": "34",
+        "isolating/concatenative": "76"
+    },
+    "exponence of selected inflectional formatives": {
+        "monoexponential case": "177",
+        "case + number": "69",
+        "case + referentiality": "12",
+        "case + tam": "9",
+        "no case": "144"
+    },
+    "inflectional synthesis of the verb": {
+        "0-1 category per word": "54",
+        "2-3 categories per word": "94",
+        "4-5 categories per word": "126",
+        "6-7 categories per word": "66",
+        "8-9 categories per word": "35",
+        "10-11 categories per word": "13",
+        "12-13 categories per word": "14"
+    },
+    "locus of marking in the clause": {
+        "head marking": "98",
+        "dependent marking": "150",
+        "head and dependent marking": "77",
+        "no marking": "68",
+        "other": "11"
+    },
+    "locus of marking in possessive noun phrases": {
+        "head marking": "93",
+        "dependent marking": "213",
+        "head and dependent marking": "38",
+        "no marking": "36",
+        "other": "23"
+    },
+    "locus of marking: whole-language typology": {
+        "head marking": "63",
+        "dependent marking": "128",
+        "head and dependent marking": "23",
+        "no marking": "24",
+        "inconsistent or other": "140"
+    },
+    "prefixing vs suffixing in inflectional morphology": {
+        "little affixation": "56",
+        "strongly suffixing": "189",
+        "weakly suffixing": "66",
+        "equal prefixing and suffixing": "68",
+        "weakly prefixing": "33",
+        "strong prefixing": "28"
+    },
+    "reduplication": {
+        "productive full and partial reduplication": "146",
+        "full reduplication only": "42",
+        "no productive reduplication": "223"
+    },
+    "case syncretism": {
+        "no case marking": "178",
+        "core cases only": "43",
+        "core and non-core": "62",
+        "no syncretism": "141"
+    },
+    "syncretism in verbal person/number marking": {
+        "no subject person/number marking": "153",
+        "syncretic": "106",
+        "not syncretic": "162"
+    },
+    "number of genders": {
+        "none": "279",
+        "two": "98",
+        "three": "77",
+        "four": "27",
+        "five or more": "47"
+    },
+    "sex-based and non-sex-based gender systems": {
+        "no gender": "265",
+        "sex-based": "128",
+        "non-sex-based": "116"
+    },
+    "systems of gender assignment": {
+        "no gender": "260",
+        "semantic": "125",
+        "semantic and formal": "105"
+    },
+    "coding of nominal plurality": {
+        "plural prefix": "37",
+        "plural suffix": "249",
+        "plural stem change": "20",
+        "plural tone": "5",
+        "plural complete reduplication": "9",
+        "mixed morphological plural": "43",
+        "plural word": "50",
+        "plural clitic": "25",
+        "no plural": "60"
+    },
+    "occurrence of nominal plurality": {
+        "no nominal plural": "50",
+        "only human nouns, optional": "15",
+        "only human nouns, obligatory": "13",
+        "all nouns, always optional": "82",
+        "all nouns, optional in inanimates": "26",
+        "all nouns, always obligatory": "243"
+    },
+    "plurality in independent personal pronouns": {
+        "no independent subject pronouns": "23",
+        "number-indifferent pronouns": "37",
+        "person-number affixes": "29",
+        "person-number stem": "208",
+        "person-number stem + pronominal plural affix": "37",
+        "person-number stem + nominal plural affix": "20",
+        "person stem + pronominal plural affix": "40",
+        "person stem + nominal plural affix": "45"
+    },
+    "the associative plural": {
+        "associative same as additive plural": "75",
+        "unique affixal associative plural": "41",
+        "unique periphrastic associative plural": "43",
+        "no associative plural": "173"
+    },
+    "definite articles": {
+        "definite word distinct from demonstrative": "132",
+        "demonstrative word used as definite article": "42",
+        "definite affix": "58",
+        "no definite, but indefinite article": "37",
+        "no definite or indefinite article": "204"
+    },
+    "indefinite articles": {
+        "indefinite word distinct from 'one'": "77",
+        "indefinite word same as 'one'": "64",
+        "indefinite affix": "35",
+        "no indefinite, but definite article": "82",
+        "no definite or indefinite article": "200"
+    },
+    "inclusive/exclusive distinction in independent pronouns": {
+        "no 'we'": "13",
+        "'we' the same as 'i'": "28",
+        "no inclusive/exclusive": "228",
+        "only inclusive": "16",
+        "inclusive/exclusive": "165"
+    },
+    "inclusive/exclusive distinction in verbal inflection": {
+        "no person marking": "169",
+        "'we' the same as 'i'": "23",
+        "no inclusive/exclusive": "159",
+        "only inclusive": "14",
+        "inclusive/exclusive": "78"
+    },
+    "distance contrasts in demonstratives": {
+        "no distance contrast": "41",
+        "two-way contrast": "181",
+        "three-way contrast": "136",
+        "four-way contrast": "26",
+        "five (or more)-way contrast": "18"
+    },
+    "pronominal and adnominal demonstratives": {
+        "identical": "212",
+        "different stem": "60",
+        "different inflection": "61"
+    },
+    "third person pronouns and demonstratives": {
+        "unrelated": "205",
+        "related for all demonstratives": "75",
+        "related to remote demonstratives": "21",
+        "related to non-remote demonstratives": "16",
+        "related by gender markers": "27",
+        "related for non-human reference": "25"
+    },
+    "gender distinctions in independent personal pronouns": {
+        "in 3rd person + 1st and/or 2nd person": "47",
+        "3rd person only, but also non-singular": "72",
+        "3rd person singular only": "76",
+        "1st or 2nd person but not 3rd": "6",
+        "3rd person non-singular only": "2",
+        "no gender distinctions": "230"
+    },
+    "politeness distinctions in pronouns": {
+        "no politeness distinction": "263",
+        "binary politeness distinction": "84",
+        "multiple politeness distinctions": "31",
+        "pronouns avoided for politeness": "32"
+    },
+    "indefinite pronouns": {
+        "interrogative-based": "115",
+        "generic-noun-based": "83",
+        "special": "63",
+        "mixed": "32",
+        "existential construction": "13"
+    },
+    "intensifiers and reflexive pronouns": {
+        "identical": "122",
+        "differentiated": "171"
+    },
+    "person marking on adpositions": {
+        "no adpositions": "54",
+        "no person marking": "235",
+        "pronouns only": "59",
+        "pronouns and nouns": "26"
+    },
+    "number of cases": {
+        "no morphological case-marking": "153",
+        "2 cases": "24",
+        "3 cases": "36",
+        "4 cases": "28",
+        "5 cases": "30",
+        "6-7 cases": "55",
+        "8-9 cases": "39",
+        "10 or more cases": "72",
+        "exclusively borderline case-marking": "17"
+    },
+    "asymmetrical case-marking": {
+        "no case-marking": "136",
+        "symmetrical": "155",
+        "additive-quantitatively asymmetrical": "43",
+        "subtractive-quantitatively asymmetrical": "23",
+        "qualitatively asymmetrical": "12",
+        "syncretism in relevant np-types": "21"
+    },
+    "position of case affixes": {
+        "case suffixes": "183",
+        "case prefixes": "23",
+        "case tone": "1",
+        "case stem change": "5",
+        "mixed morphological case": "24",
+        "postpositional clitics": "34",
+        "prepositional clitics": "19",
+        "inpositional clitics": "1",
+        "no case affixes or adpositional clitics": "135"
+    },
+    "comitatives and instrumentals": {
+        "identity": "69",
+        "differentiation": "244",
+        "mixed": "29"
+    },
+    "ordinal numerals": {
+        "none": "25",
+        "one, two, three": "25",
+        "first, two, three": "15",
+        "one-th, two-th, three-th": "130",
+        "first/one-th, two-th, three-th": "31",
+        "first, two-th, three-th": "57",
+        "first, second, three-th": "52",
+        "various": "26"
+    },
+    "distributive numerals": {
+        "no distributive numerals": "119",
+        "marked by reduplication": "33",
+        "marked by prefix": "17",
+        "marked by suffix": "39",
+        "marked by preceding word": "22",
+        "marked by following word": "11",
+        "marked by mixed or other strategies": "20"
+    },
+    "numeral classifiers": {
+        "absent": "267",
+        "optional": "42",
+        "obligatory": "35"
+    },
+    "conjunctions and universal quantifiers": {
+        "formally different": "156",
+        "formally similar, without interrogative": "37",
+        "formally similar, with interrogative": "30"
+    },
+    "position of pronominal possessive affixes": {
+        "possessive prefixes": "71",
+        "possessive suffixes": "125",
+        "prefixes and suffixes": "9",
+        "no possessive affixes": "177"
+    },
+    "obligatory possessive inflection": {
+        "exists": "76",
+        "absent": "305"
+    },
+    "possessive classification": {
+        "no possessive classification": "245",
+        "two classes": "85",
+        "three to five classes": "25",
+        "more than five classes": "8"
+    },
+    "genitives, adjectives and relative clauses": {
+        "weakly differentiated": "41",
+        "genitives and adjectives collapsed": "27",
+        "genitives and relative clauses collapsed": "4",
+        "adjectives and relative clauses collapsed": "42",
+        "moderately differentiated in other ways": "15",
+        "highly differentiated": "171"
+    },
+    "adjectives without nouns": {
+        "not without noun": "49",
+        "without marking": "129",
+        "marked by prefix": "12",
+        "marked by suffix": "53",
+        "marked by preceding word": "22",
+        "marked by following word": "18",
+        "marked by mixed or other strategies": "19"
+    },
+    "action nominal constructions": {
+        "sentential": "31",
+        "possessive-accusative": "43",
+        "ergative-possessive": "36",
+        "double-possessive": "18",
+        "other": "16",
+        "mixed": "36",
+        "restricted": "20",
+        "no action nominals": "54"
+    },
+    "noun phrase conjunction": {
+        "'and' different from 'with'": "230",
+        "'and' identical to 'with'": "82"
+    },
+    "nominal and verbal conjunction": {
+        "identity": "160",
+        "differentiation": "140",
+        "both expressed by juxtaposition": "18"
+    },
+    "perfective/imperfective aspect": {
+        "grammatical marking": "250",
+        "no grammatical marking": "152"
+    },
+    "the past tense": {
+        "present, no remoteness distinctions": "239",
+        "present, 2-3 remoteness distinctions": "77",
+        "present, 4 or more remoteness distinctions": "10",
+        "no past tense": "115"
+    },
+    "the future tense": {
+        "inflectional future exists": "258",
+        "no inflectional future": "178"
+    },
+    "the perfect": {
+        "from possessive": "24",
+        "from 'finish', 'already'": "34",
+        "other perfect": "173",
+        "no perfect": "163"
+    },
+    "position of tense-aspect affixes": {
+        "tense-aspect prefixes": "49",
+        "tense-aspect suffixes": "233",
+        "tense-aspect tone": "4",
+        "mixed type": "60",
+        "no tense-aspect inflection": "72"
+    },
+    "the morphological imperative": {
+        "second singular and second plural": "158",
+        "second singular": "17",
+        "second plural": "3",
+        "second person number-neutral": "92",
+        "no second-person imperatives": "100"
+    },
+    "the prohibitive": {
+        "normal imperative + normal negative": "180",
+        "normal imperative + special negative": "79",
+        "special imperative + normal negative": "21",
+        "special imperative + special negative": "57"
+    },
+    "imperative-hortative systems": {
+        "maximal system": "101",
+        "minimal system": "29",
+        "both types of system": "19",
+        "neither type of system": "116"
+    },
+    "the optative": {
+        "inflectional optative present": "104",
+        "inflectional optative absent": "247"
+    },
+    "situational possibility": {
+        "affixes on verbs": "95",
+        "verbal constructions": "161",
+        "other kinds of markers": "35"
+    },
+    "epistemic possibility": {
+        "verbal constructions": "105",
+        "affixes on verbs": "100",
+        "other": "85"
+    },
+    "overlap between situational and epistemic modal marking": {
+        "overlap for both possibility and necessity": "69",
+        "overlap for either possibility or necessity": "58",
+        "no overlap": "123"
+    },
+    "semantic distinctions of evidentiality": {
+        "no grammatical evidentials": "187",
+        "indirect only": "65",
+        "direct and indirect": "74"
+    },
+    "coding of evidentiality": {
+        "no grammatical evidentials": "188",
+        "verbal affix or clitic": "71",
+        "part of the tense system": "22",
+        "separate particle": "42",
+        "modal morpheme": "12",
+        "mixed": "8"
+    },
+    "suppletion according to tense and aspect": {
+        "tense": "41",
+        "aspect": "25",
+        "tense and aspect": "39",
+        "none": "216"
+    },
+    "verbal number and suppletion": {
+        "none": "271",
+        "singular-plural pairs, no suppletion": "18",
+        "singular-plural pairs, suppletion": "14",
+        "singular-dual-plural triples, no suppletion": "10",
+        "singular-dual-plural triples, suppletion": "4"
+    },
+    "order of subject, object and verb": {
+        "sov": "150",
+        "svo": "149",
+        "vso": "76",
+        "vos": "22",
+        "ovs": "12",
+        "osv": "19",
+        "no dominant order": "70"
+    },
+    "order of subject and verb": {
+        "sv": "318",
+        "vs": "115",
+        "no dominant order": "47"
+    },
+    "order of object and verb": {
+        "ov": "188",
+        "vo": "241",
+        "no dominant order": "48"
+    },
+    "order of object, oblique, and verb": {
+        "vox": "163",
+        "xvo": "14",
+        "xov": "49",
+        "oxv": "32",
+        "ovx": "26",
+        "no dominant order": "82"
+    },
+    "order of adposition and noun phrase": {
+        "postpositions": "160",
+        "prepositions": "193",
+        "inpositions": "8",
+        "no dominant order": "20",
+        "no adpositions": "40"
+    },
+    "order of genitive and noun": {
+        "genitive-noun": "188",
+        "noun-genitive": "205",
+        "no dominant order": "48"
+    },
+    "order of adjective and noun": {
+        "adjective-noun": "191",
+        "noun-adjective": "219",
+        "no dominant order": "38",
+        "only internally-headed relative clauses": "7"
+    },
+    "order of demonstrative and noun": {
+        "demonstrative-noun": "236",
+        "noun-demonstrative": "110",
+        "demonstrative prefix": "18",
+        "demonstrative suffix": "21",
+        "demonstrative before and after noun": "4",
+        "mixed": "24"
+    },
+    "order of numeral and noun": {
+        "numeral-noun": "264",
+        "noun-numeral": "119",
+        "no dominant order": "28",
+        "numeral only modifies verb": "6"
+    },
+    "order of relative clause and noun": {
+        "noun-relative clause": "224",
+        "relative clause-noun": "80",
+        "internally headed": "12",
+        "correlative": "7",
+        "adjoined": "6",
+        "doubly headed": "4",
+        "mixed": "40"
+    },
+    "order of degree word and adjective": {
+        "degree word-adjective": "164",
+        "adjective-degree word": "92",
+        "no dominant order": "30"
+    },
+    "position of polar question particles": {
+        "initial": "90",
+        "final": "97",
+        "second position": "24",
+        "other position": "24",
+        "in either of two positions": "22",
+        "no question particle": "108"
+    },
+    "position of interrogative phrases in content questions": {
+        "initial interrogative phrase": "125",
+        "not initial interrogative phrase": "175",
+        "mixed": "45"
+    },
+    "order of adverbial subordinator and clause": {
+        "initial subordinator word": "186",
+        "final subordinator word": "40",
+        "internal subordinator word": "11",
+        "subordinating suffix": "27",
+        "mixed": "43"
+    },
+    "relationship between the order of object and verb and the order of adposition and noun phrase": {
+        "ov and postpositions": "117",
+        "ov and prepositions": "16",
+        "vo and postpositions": "28",
+        "vo and prepositions": "134",
+        "other": "64"
+    },
+    "relationship between the order of object and verb and the order of relative clause and noun": {
+        "ov and reln": "63",
+        "ov and nrel": "41",
+        "vo and reln": "13",
+        "vo and nrel": "147",
+        "other": "76"
+    },
+    "relationship between the order of object and verb and the order of adjective and noun": {
+        "ov and adjn": "81",
+        "ov and nadj": "60",
+        "vo and adjn": "62",
+        "vo and nadj": "113",
+        "other": "50"
+    },
+    "order of negative morpheme and verb": {
+        "negv": "108",
+        "vneg": "25",
+        "[neg-v]": "27",
+        "[v-neg]": "42",
+        "negative tone": "0",
+        "type 1 / type 2": "7",
+        "type 1 / type 3": "1",
+        "type 1 / type 4": "4",
+        "type 2 / type 3": "0",
+        "type 2 / type 4": "3",
+        "type 3 / type 4": "2",
+        "type 3 / negative infix": "1",
+        "optsingleneg": "0",
+        "obligdoubleneg": "14",
+        "optdoubleneg": "11",
+        "opttripleneg&&obligdoubleneg": "0",
+        "opttripleneg&&optdoubleneg": "1"
+    },
+    "position of negative word with respect to subject, object, and verb": {
+        "negsvo": "5",
+        "snegvo": "43",
+        "svnego": "5",
+        "svoneg": "4",
+        "negsov": "2",
+        "snegov": "3",
+        "sonegv": "17",
+        "sovneg": "16",
+        "negvso": "17",
+        "vsnego": "1",
+        "vsoneg": "0",
+        "negvos": "5",
+        "onegvs": "2",
+        "ovnegs": "1",
+        "osvneg": "1",
+        "more than one position": "23",
+        "optsingleneg": "0",
+        "obligdoubleneg": "12",
+        "optdoubleneg": "10",
+        "morphneg": "44",
+        "other": "20"
+    },
+    "alignment of case marking of full noun phrases": {
+        "neutral": "147",
+        "nominative - accusative (standard)": "127",
+        "nominative - accusative (marked nominative)": "19",
+        "ergative - absolutive": "44",
+        "tripartite": "11",
+        "active-inactive": "26"
+    },
+    "alignment of case marking of pronouns": {
+        "neutral": "106",
+        "nominative - accusative (standard)": "154",
+        "nominative - accusative (marked nominative)": "9",
+        "ergative - absolutive": "33",
+        "tripartite": "10",
+        "active - inactive": "30",
+        "none": "10"
+    },
+    "alignment of verbal person marking": {
+        "neutral": "121",
+        "accusative": "155",
+        "ergative": "23",
+        "active": "32",
+        "hierarchical": "14",
+        "split": "13"
+    },
+    "expression of pronominal subjects": {
+        "obligatory pronouns in subject position": "80",
+        "subject affixes on verb": "148",
+        "subject clitics on variable host": "11",
+        "subject pronouns in different position": "8",
+        "optional pronouns in subject position": "64",
+        "mixed": "27"
+    },
+    "verbal person marking": {
+        "no person marking": "145",
+        "only the a argument": "88",
+        "only the p argument": "8",
+        "a or p argument": "16",
+        "both the a and p arguments": "130"
+    },
+    "third person zero of verbal person marking": {
+        "no person marking": "131",
+        "no zero realization": "132",
+        "zero in some 3sg forms": "33",
+        "zero in all 3sg forms": "26",
+        "zero in all 3rd person forms": "15",
+        "zero only in 3rd nonsingular": "1"
+    },
+    "order of person markers on the verb": {
+        "a and p do not or do not both occur on the verb": "208",
+        "a precedes p": "64",
+        "p precedes a": "34",
+        "both orders of a and p occur": "15",
+        "a and p are fused": "16"
+    },
+    "reciprocal constructions": {
+        "no reciprocals": "19",
+        "distinct from reflexive": "161",
+        "mixed": "28",
+        "identical to reflexive": "63"
+    },
+    "passive constructions": {
+        "present": "230",
+        "absent": "132"
+    },
+    "antipassive constructions": {
+        "implicit patient": "27",
+        "oblique patient": "27",
+        "no antipassive": "258"
+    },
+    "applicative constructions": {
+        "benefactive object, both bases": "13",
+        "benefactive object, only transitive": "8",
+        "benefactive and other, both bases": "56",
+        "benefactive and other, only transitive": "1",
+        "non-benefactive object, both bases": "8",
+        "non-benefactive object, only transitive": "2",
+        "non-benefactive object, only intransitive": "3",
+        "no applicative construction": "180"
+    },
+    "periphrastic causative constructions": {
+        "sequential but no purposive": "54",
+        "purposive but no sequential": "57",
+        "both": "58"
+    },
+    "nonperiphrastic causative constructions": {
+        "neither": "37",
+        "morphological but no compound": "177",
+        "compound but no morphological": "19",
+        "both": "25"
+    },
+    "negative morphemes": {
+        "negative affix": "111",
+        "negative particle": "153",
+        "negative auxiliary verb": "27",
+        "negative word, unclear if verb or particle": "21",
+        "variation between negative word and affix": "29",
+        "double negation": "16"
+    },
+    "symmetric and asymmetric standard negation": {
+        "symmetric": "170",
+        "asymmetric": "31",
+        "both": "74"
+    },
+    "subtypes of asymmetric standard negation": {
+        "a/fin": "23",
+        "a/nonreal": "10",
+        "a/cat": "44",
+        "a/fin and a/nonreal": "5",
+        "a/fin and a/cat": "17",
+        "a/nonreal and a/cat": "6",
+        "non-assignable": "119"
+    },
+    "negative indefinite pronouns and predicate negation": {
+        "predicate negation also present": "123",
+        "no predicate negation": "45",
+        "mixed behaviour": "14",
+        "negative existential construction": "12"
+    },
+    "polar questions": {
+        "question particle": "207",
+        "interrogative verb morphology": "63",
+        "mixture of previous two types": "12",
+        "interrogative word order": "15",
+        "absence of declarative morphemes": "1",
+        "interrogative intonation only": "34",
+        "no interrogative-declarative distinction": "6"
+    },
+    "predicative possession": {
+        "locational": "57",
+        "genitive": "32",
+        "topic": "18",
+        "conjunctional": "19",
+        "'have'": "114"
+    },
+    "predicative adjectives": {
+        "verbal encoding": "129",
+        "nonverbal encoding": "107",
+        "mixed": "47"
+    },
+    "nominal and locational predication": {
+        "different": "162",
+        "identical": "106"
+    },
+    "zero copula for predicate nominals": {
+        "impossible": "170",
+        "possible": "130"
+    },
+    "comparative constructions": {
+        "locational": "64",
+        "exceed": "44",
+        "conjoined": "22",
+        "particle": "80"
+    },
+    "relativization on subjects": {
+        "relative pronoun": "87",
+        "non-reduction": "29",
+        "pronoun-retention": "15",
+        "gap": "143"
+    },
+    "relativization on obliques": {
+        "relative pronoun": "85",
+        "non-reduction": "21",
+        "pronoun-retention": "39",
+        "gap": "76",
+        "not possible": "22"
+    },
+    "'want' complement subjects": {
+        "subject is left implicit": "117",
+        "subject is expressed overtly": "40",
+        "both construction types exist": "26",
+        "desiderative verbal affix": "49",
+        "desiderative particle": "19"
+    },
+    "purpose clauses": {
+        "balanced": "86",
+        "balanced/deranked": "42",
+        "deranked": "100"
+    },
+    "'when' clauses": {
+        "balanced": "131",
+        "balanced/deranked": "50",
+        "deranked": "54"
+    },
+    "reason clauses": {
+        "balanced": "144",
+        "balanced/deranked": "42",
+        "deranked": "44"
+    },
+    "utterance complement clauses": {
+        "balanced": "145",
+        "balanced/deranked": "37",
+        "deranked": "21"
+    },
+    "hand and arm": {
+        "identical": "56",
+        "different": "304"
+    },
+    "finger and hand": {
+        "identical": "21",
+        "different": "328"
+    },
+    "numeral bases": {
+        "decimal": "260",
+        "hybrid vigesimal-decimal": "31",
+        "pure vigesimal": "20",
+        "other base": "75",
+        "extended body-part system": "9",
+        "restricted": "15"
+    },
+    "number of non-derived basic colour categories": {
+        "3": "12",
+        "4": "12",
+        "5": "27",
+        "6": "109",
+        "3.5": "0",
+        "4.5": "1",
+        "5.5": "5"
+    },
+    "number of basic colour categories": {
+        "11": "80",
+        "3-4": "12",
+        "4.5-5.5": "9",
+        "6-6.5": "14",
+        "7-7.5": "4",
+        "8-8.5": "14",
+        "9-10": "25"
+    },
+    "green and blue": {
+        "green vs. blue": "194",
+        "green/blue": "40",
+        "black/green/blue": "3",
+        "black/blue vs. green": "7",
+        "yellow/green/blue": "1",
+        "yellow/green vs. blue": "7",
+        "none": "2"
+    },
+    "red and yellow": {
+        "red vs. yellow": "227",
+        "red/yellow": "15",
+        "yellow/green/blue vs. red": "2",
+        "yellow/green vs. red": "6",
+        "none": "4"
+    },
+    "m-t pronouns": {
+        "no m-t pronouns": "242",
+        "m-t pronouns, paradigmatic": "72",
+        "m-t pronouns, non-paradigmatic": "6"
+    },
+    "n-m pronouns": {
+        "no n-m pronouns": "284",
+        "n-m pronouns, paradigmatic": "21",
+        "n-m pronouns, non-paradigmatic": "11"
+    },
+    "tea": {
+        "words derived from sinitic cha": "63",
+        "words derived from min nan chinese te": "57",
+        "others": "132"
+    },
+    "para-linguistic usages of clicks": {
+        "logical meanings": "21",
+        "affective meanings": "86",
+        "other or none": "86"
+    },
+}
