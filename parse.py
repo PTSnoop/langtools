@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # coding=utf-8
 
-import sys
+import sys,os
 sys.path.append(os.getcwd())
 import soundchange
 from langthesaurus import *
